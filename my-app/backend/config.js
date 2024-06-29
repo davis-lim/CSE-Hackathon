@@ -1,1 +1,2 @@
-export const PORT = 5555;
+export const PORT = 8000;
+export const mongoDBURL = 'mongodb+srv://lmaisnam2:M2o0TIazwpYv943S@csehackathon2024.yolyx4j.mongodb.net/users-collection?retryWrites=true&w=majority&appName=csehackathon2024'
