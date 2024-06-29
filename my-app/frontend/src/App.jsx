@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard';
 import Hive from './pages/Hive';
 import Memories from './pages/Memories';
 import Camera from './pages/Camera';
+import Memory from './pages/Memory';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/hive' element={<Hive/>}/>
           <Route path='/memories' element={<Memories/>}/>
           <Route path='/camera' element={<Camera/>}/>
+          <Route path='/memory' element={<Memory/>}/>
         </Routes>
       </BrowserRouter>
   );
