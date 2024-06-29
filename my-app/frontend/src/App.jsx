@@ -6,9 +6,10 @@ import Landing from './pages/LandingPage';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Hive from './pages/Hive';
+import Camera from './pages/Camera';
 
 function App() {
-  
+
 
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/hive' element={<Hive/>}/>
+          <Route path='/camera' element={<Camera/>}/>
         </Routes>
       </BrowserRouter>
   );
