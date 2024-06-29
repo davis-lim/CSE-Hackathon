@@ -6,6 +6,9 @@ function MyComponent() {
     const navigateToDash = () => {
         navigate('/dashboard');
     }
+    const navigateToMemory = () => {
+      navigate('/memory');
+  }
   return (
     <>
       <div className="div">
@@ -14,6 +17,7 @@ function MyComponent() {
           loading="lazy"
           srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/948ebb2f642f22e8d67ab4be30f46f20cac8ea42b21f770a16b80669f4d957e0?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/948ebb2f642f22e8d67ab4be30f46f20cac8ea42b21f770a16b80669f4d957e0?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/948ebb2f642f22e8d67ab4be30f46f20cac8ea42b21f770a16b80669f4d957e0?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/948ebb2f642f22e8d67ab4be30f46f20cac8ea42b21f770a16b80669f4d957e0?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/948ebb2f642f22e8d67ab4be30f46f20cac8ea42b21f770a16b80669f4d957e0?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/948ebb2f642f22e8d67ab4be30f46f20cac8ea42b21f770a16b80669f4d957e0?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/948ebb2f642f22e8d67ab4be30f46f20cac8ea42b21f770a16b80669f4d957e0?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/948ebb2f642f22e8d67ab4be30f46f20cac8ea42b21f770a16b80669f4d957e0?apiKey=5880849d19014bf7921644dd08a954e6&"
           className="img"
+          onClick={navigateToMemory}
         />
         <div className="div-3">
           <div className="div-4">

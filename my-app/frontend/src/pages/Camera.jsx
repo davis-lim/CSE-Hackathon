@@ -4,12 +4,14 @@ import { useNavigate } from 'react-router-dom';
 
 function MyComponent() {
     const webRef = React.useRef(null);
+    const [imageSrc, setImageSrc] = React.useState(null);
     const navigate = useNavigate();
     const taskId = '60ec6c24e1a569001bbbf9a7';
 
     const showImage = async () => {
         try {
             const image = webRef.current.getScreenshot();
+            setImageSrc(image); // Save the captured image
             const response = await fetch('/api/upload-image', {
                 method: 'POST',
                 headers: {
@@ -44,14 +46,17 @@ function MyComponent() {
                 </div>
                 <div className="div-7">Journal for 10 Minutes</div>
                 <div className="camera" />
-                <Webcam ref={webRef} className="frame"/>
+                {imageSrc ? (
+                    <img src={imageSrc} alt="Captured" className="frame"/>
+                ) : (
+                    <Webcam ref={webRef} className="frame"/>
+                )}
                 <img
                     loading="lazy"
                     srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/c1a19548f02348163efa2d2451d4da1b36afcbe7a038b74087f8949293593b90?apiKey=b5d1be722c29404797af28c1c725d045&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/c1a19548f02348163efa2d2451d4da1b36afcbe7a038b74087f8949293593b90?apiKey=b5d1be722c29404797af28c1c725d045&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c1a19548f02348163efa2d2451d4da1b36afcbe7a038b74087f8949293593b90?apiKey=b5d1be722c29404797af28c1c725d045&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/c1a19548f02348163efa2d2451d4da1b36afcbe7a038b74087f8949293593b90?apiKey=b5d1be722c29404797af28c1c725d045&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/c1a19548f02348163efa2d2451d4da1b36afcbe7a038b74087f8949293593b90?apiKey=b5d1be722c29404797af28c1c725d045&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c1a19548f02348163efa2d2451d4da1b36afcbe7a038b74087f8949293593b90?apiKey=b5d1be722c29404797af28c1c725d045&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/c1a19548f02348163efa2d2451d4da1b36afcbe7a038b74087f8949293593b90?apiKey=b5d1be722c29404797af28c1c725d045&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/c1a19548f02348163efa2d2451d4da1b36afcbe7a038b74087f8949293593b90?apiKey=b5d1be722c29404797af28c1c725d045&"
                     className="img-2"
                     alt="Button"
                     onClick={() => showImage()}
-                    
                 />
             </div>
             <style jsx>{`
@@ -60,7 +65,6 @@ function MyComponent() {
           display: flex;
           height: 800px;
           width: 430px;
-          font-family: 'Press Start 2P', cursive;
           flex-direction: column;
           font-size: 20px;
           color: #472700;
@@ -103,9 +107,9 @@ function MyComponent() {
         }
         .div-5 {
           color: #472700;
-          text-align: center;
-          margin-left: -30px;
-          margin-bottom: 20px;
+          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
+            sans-serif;
+          margin-left: 95px;
         }
         .div-6 {
           color: #472700;
@@ -116,8 +120,9 @@ function MyComponent() {
         }
         .div-7 {
           color: #ff9123;
-          margin-top: 20px;
-          margin-bottom: 30px;
+          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
+            sans-serif;
+          margin-left: 120px;
         }
         .div-8 {
           border-radius: 25px;
@@ -134,7 +139,7 @@ function MyComponent() {
           width: 72px;
           border-radius: 25px;
           box-shadow: 0px 6px 4px 0px rgba(234, 117, 0, 0.7);
-          margin-top: 150px;
+          margin-top: 48px;
           transition-duration: 0.4s;
           position: relative;
           overflow: hidden;
