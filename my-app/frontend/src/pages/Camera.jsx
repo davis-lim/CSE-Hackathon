@@ -51,6 +51,7 @@ function MyComponent() {
                     className="img-2"
                     alt="Button"
                     onClick={() => showImage()}
+                    
                 />
             </div>
             <style jsx>{`
@@ -59,6 +60,7 @@ function MyComponent() {
           display: flex;
           height: 800px;
           width: 430px;
+          font-family: 'Press Start 2P', cursive;
           flex-direction: column;
           font-size: 20px;
           color: #472700;
@@ -101,9 +103,9 @@ function MyComponent() {
         }
         .div-5 {
           color: #472700;
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
-          margin-left: 95px;
+          text-align: center;
+          margin-left: -30px;
+          margin-bottom: 20px;
         }
         .div-6 {
           color: #472700;
@@ -114,9 +116,8 @@ function MyComponent() {
         }
         .div-7 {
           color: #ff9123;
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
-          margin-left: 120px;
+          margin-top: 20px;
+          margin-bottom: 30px;
         }
         .div-8 {
           border-radius: 25px;
@@ -133,7 +134,7 @@ function MyComponent() {
           width: 72px;
           border-radius: 25px;
           box-shadow: 0px 6px 4px 0px rgba(234, 117, 0, 0.7);
-          margin-top: 48px;
+          margin-top: 150px;
           transition-duration: 0.4s;
           position: relative;
           overflow: hidden;
