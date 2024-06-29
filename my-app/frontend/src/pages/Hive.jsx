@@ -1,6 +1,11 @@
 import * as React from "react";
+import { useNavigate, Navigate } from 'react-router-dom';
 
 function MyComponent() {
+    const navigate = useNavigate();
+    const navigateToRego = () => {
+        navigate('/dashboard');
+    }
   return (
     <>
       <div className="div">
@@ -8,6 +13,7 @@ function MyComponent() {
           loading="lazy"
           srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/6196432f6c65eecfb60e734463e2ea5269fb32f9c20bea7fdf8d1fd0d89e9bd4?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/6196432f6c65eecfb60e734463e2ea5269fb32f9c20bea7fdf8d1fd0d89e9bd4?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6196432f6c65eecfb60e734463e2ea5269fb32f9c20bea7fdf8d1fd0d89e9bd4?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/6196432f6c65eecfb60e734463e2ea5269fb32f9c20bea7fdf8d1fd0d89e9bd4?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/6196432f6c65eecfb60e734463e2ea5269fb32f9c20bea7fdf8d1fd0d89e9bd4?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/6196432f6c65eecfb60e734463e2ea5269fb32f9c20bea7fdf8d1fd0d89e9bd4?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/6196432f6c65eecfb60e734463e2ea5269fb32f9c20bea7fdf8d1fd0d89e9bd4?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/6196432f6c65eecfb60e734463e2ea5269fb32f9c20bea7fdf8d1fd0d89e9bd4?apiKey=5880849d19014bf7921644dd08a954e6&"
           className="img"
+          onClick={navigateToRego}
         />
         <div className="div-2">
           <div className="div-3">The Hive </div>
@@ -130,18 +136,11 @@ function MyComponent() {
             <div className="div-37">
               <div className="div-38">Buzzer</div>
             </div>
-            <div className="div-40">
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&"
-                className="img-16"
-              />
-              <img
-                loading="lazy"
-                srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&"
-                className="img-17"
-              />
-            </div>
+            <img
+            loading="lazy"
+            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&"
+            className="img-16"
+            />
           </div>
         </div>
         <div className="div-41">
@@ -162,26 +161,11 @@ function MyComponent() {
             <div className="div-45">
               <div className="div-46">BusyBee</div>
             </div>
-            <div className="div-48">
               <img
                 loading="lazy"
                 srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&"
                 className="img-20"
               />
-              <div className="div-49">
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/35b247feb55b6dfd51a283d16f2477318bbe397b9850b08f14b033cf4038e167?apiKey=5880849d19014bf7921644dd08a954e6&"
-                  className="img-21"
-                />
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/40349c01bb7708524de6dc271106d2c01e09fd5d06291ee6def16f9c7dd2a27d?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/40349c01bb7708524de6dc271106d2c01e09fd5d06291ee6def16f9c7dd2a27d?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/40349c01bb7708524de6dc271106d2c01e09fd5d06291ee6def16f9c7dd2a27d?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/40349c01bb7708524de6dc271106d2c01e09fd5d06291ee6def16f9c7dd2a27d?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/40349c01bb7708524de6dc271106d2c01e09fd5d06291ee6def16f9c7dd2a27d?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/40349c01bb7708524de6dc271106d2c01e09fd5d06291ee6def16f9c7dd2a27d?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/40349c01bb7708524de6dc271106d2c01e09fd5d06291ee6def16f9c7dd2a27d?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/40349c01bb7708524de6dc271106d2c01e09fd5d06291ee6def16f9c7dd2a27d?apiKey=5880849d19014bf7921644dd08a954e6&"
-                  className="img-22"
-                />
-                <div className="div-50">40</div>
-              </div>
-            </div>
           </div>
         </div>
         <div className="div-52">
@@ -294,8 +278,8 @@ function MyComponent() {
           object-fit: auto;
           object-position: center;
           border-radius: 25px;
-          border: 0px;
-          width: 20%;
+          width: 17%;
+          height: 17%;
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
         .div-8 {
@@ -305,7 +289,8 @@ function MyComponent() {
           align-self: start;
           display: flex;
           gap: 20px;
-          font-size: 12px;
+          margin-top: 10px;
+          font-size: 1em;
           justify-content: space-between;
           padding: 4px 8px 4px 29px;
         }
@@ -337,19 +322,21 @@ function MyComponent() {
           padding: 0 20px;
         }
         .div-13 {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          overflow: hidden;
-          aspect-ratio: 1;
-          width: 48px;
-          align-items: start;
-          color: #bababa;
-          justify-content: center;
-          margin: auto 0;
-          padding: 15px;
-          font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            width: 48px;
+            align-items: center;
+            color: #ffce2b;
+            justify-content: center;
+            margin: auto 0;
+            padding: 15px 17px;
+            font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
             sans-serif;
+            font-weight: bold;
+            font-size: 1.5em;
         }
         .img-5 {
           position: absolute;
@@ -363,23 +350,26 @@ function MyComponent() {
           position: relative;
         }
         .img-6 {
-          aspect-ratio: 0.92;
-          object-fit: auto;
-          object-position: center;
-          width: 55px;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            aspect-ratio: 0.92;
+            object-fit: auto;
+            object-position: center;
+            border-radius: 25px;
+            width: 17%;
+            height: 17%;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
         .div-15 {
-          border-radius: 25px;
-          box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
-          background-color: rgba(255, 145, 35, 0.31);
-          align-self: start;
-          display: flex;
-          align-items: flex-start;
-          gap: 20px;
-          font-size: 15px;
-          justify-content: space-between;
-          padding: 4px 8px 4px 31px;
+            border-radius: 25px;
+            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
+            background-color: rgba(255, 145, 35, 0.31);
+            align-self: start;
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            justify-content: space-between;
+            padding: 4px 8px 4px 29px;
+            width: 140px;
         }
         .div-16 {
           display: flex;
@@ -410,19 +400,21 @@ function MyComponent() {
           padding: 0 20px;
         }
         .div-20 {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          overflow: hidden;
-          aspect-ratio: 1;
-          width: 48px;
-          align-items: start;
-          color: #d09a49;
-          justify-content: center;
-          margin: auto 0;
-          padding: 15px;
-          font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            width: 48px;
+            align-items: center;
+            color: #ffce2b;
+            justify-content: center;
+            margin: auto 0;
+            padding: 15px 17px;
+            font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
             sans-serif;
+            font-weight: bold;
+            font-size: 1.5em;
         }
         .img-8 {
           position: absolute;
@@ -436,22 +428,26 @@ function MyComponent() {
           position: relative;
         }
         .img-9 {
-          aspect-ratio: 0.92;
-          object-fit: auto;
-          object-position: center;
-          width: 55px;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            aspect-ratio: 0.92;
+            object-fit: auto;
+            object-position: center;
+            border-radius: 25px;
+            width: 17%;
+            height: 17%;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
         .div-22 {
-          border-radius: 25px;
-          box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
-          background-color: rgba(255, 145, 35, 0.31);
-          align-self: start;
-          display: flex;
-          align-items: flex-start;
-          gap: 5px;
-          font-size: 12px;
-          padding: 4px 8px 4px 19px;
+            border-radius: 25px;
+            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
+            background-color: rgba(255, 145, 35, 0.31);
+            align-self: start;
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            justify-content: space-between;
+            padding: 4px 8px 4px 29px;
+            width: 140px;
         }
         .div-23 {
           display: flex;
@@ -465,11 +461,11 @@ function MyComponent() {
           z-index: 10;
         }
         .img-10 {
-          aspect-ratio: 0.74;
-          object-fit: auto;
-          object-position: center;
-          width: 37px;
-          align-self: start;
+            aspect-ratio: 0.74;
+            object-fit: auto;
+            object-position: center;
+            width: 37px;
+            margin-left: -10px;
         }
         .div-26 {
           display: flex;
@@ -482,19 +478,21 @@ function MyComponent() {
           padding: 0 20px;
         }
         .div-27 {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          overflow: hidden;
-          aspect-ratio: 1;
-          width: 48px;
-          align-items: start;
-          color: #ff9123;
-          justify-content: center;
-          margin: auto 0;
-          padding: 15px;
-          font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            width: 48px;
+            align-items: center;
+            color: #ffce2b;
+            justify-content: center;
+            margin: auto 0;
+            padding: 15px 17px;
+            font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
             sans-serif;
+            font-weight: bold;
+            font-size: 1.5em;
         }
         .img-11 {
           position: absolute;
@@ -508,23 +506,26 @@ function MyComponent() {
           position: relative;
         }
         .img-12 {
-          aspect-ratio: 0.92;
-          object-fit: auto;
-          object-position: center;
-          width: 55px;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            aspect-ratio: 0.92;
+            object-fit: auto;
+            object-position: center;
+            border-radius: 25px;
+            width: 17%;
+            height: 17%;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
         .div-29 {
-          border-radius: 25px;
-          box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
-          background-color: rgba(255, 145, 35, 0.31);
-          align-self: start;
-          display: flex;
-          align-items: flex-start;
-          gap: 20px;
-          font-size: 15px;
-          justify-content: space-between;
-          padding: 0 8px 7px 28px;
+            border-radius: 25px;
+            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
+            background-color: rgba(255, 145, 35, 0.31);
+            align-self: start;
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            justify-content: space-between;
+            padding: 4px 8px 4px 29px;
+            width: 140px;
         }
         .div-30 {
           display: flex;
@@ -553,20 +554,21 @@ function MyComponent() {
           padding: 0 20px;
         }
         .div-34 {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          overflow: hidden;
-          aspect-ratio: 1;
-          width: 48px;
-          align-items: start;
-          color: #ff9123;
-          white-space: nowrap;
-          justify-content: center;
-          margin: auto 0;
-          padding: 15px;
-          font: 400 20px Press Start 2P, -apple-system, Roboto, Helvetica,
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            width: 48px;
+            align-items: center;
+            color: #ffce2b;
+            justify-content: center;
+            margin: auto 0;
+            padding: 15px 17px;
+            font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
             sans-serif;
+            font-weight: bold;
+            font-size: 1.5em;
         }
         .img-14 {
           position: absolute;
@@ -580,22 +582,26 @@ function MyComponent() {
           position: relative;
         }
         .img-15 {
-          aspect-ratio: 0.92;
-          object-fit: auto;
-          object-position: center;
-          width: 55px;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            aspect-ratio: 0.92;
+            object-fit: auto;
+            object-position: center;
+            border-radius: 25px;
+            width: 17%;
+            height: 17%;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
         .div-36 {
-          border-radius: 25px;
-          box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
-          background-color: rgba(255, 145, 35, 0.31);
-          align-self: start;
-          display: flex;
-          align-items: flex-start;
-          gap: 20px;
-          justify-content: space-between;
-          padding: 0 8px 7px 28px;
+            border-radius: 25px;
+            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
+            background-color: rgba(255, 145, 35, 0.31);
+            align-self: start;
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            justify-content: space-between;
+            padding: 4px 8px 4px 29px;
+            width: 140px;
         }
         .div-37 {
           display: flex;
@@ -623,18 +629,11 @@ function MyComponent() {
           justify-content: center;
         }
         .img-16 {
-          position: absolute;
-          inset: 0;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-        .img-17 {
-          aspect-ratio: 0.74;
-          object-fit: auto;
-          object-position: center;
-          width: 100%;
+            aspect-ratio: 0.74;
+            object-fit: auto;
+            object-position: center;
+            width: 37px;
+            align-self: start;
         }
         .div-41 {
           border-radius: 25px;
@@ -643,26 +642,28 @@ function MyComponent() {
           align-self: stretch;
           display: flex;
           margin-top: 14px;
-          width: 100%;
+          width: 95%;
           gap: 7px;
           font-weight: 400;
           white-space: nowrap;
           padding: 7px 13px;
         }
         .div-42 {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          overflow: hidden;
-          aspect-ratio: 1;
-          width: 48px;
-          align-items: start;
-          color: #ff9123;
-          justify-content: center;
-          margin: auto 0;
-          padding: 15px;
-          font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            width: 48px;
+            align-items: center;
+            color: #ffce2b;
+            justify-content: center;
+            margin-left: 30px;
+            padding: 15px 17px;
+            font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
             sans-serif;
+            font-weight: bold;
+            font-size: 1.5em;
         }
         .img-18 {
           position: absolute;
@@ -676,22 +677,26 @@ function MyComponent() {
           position: relative;
         }
         .img-19 {
-          aspect-ratio: 0.92;
-          object-fit: auto;
-          object-position: center;
-          width: 55px;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            aspect-ratio: 0.92;
+            object-fit: auto;
+            object-position: center;
+            border-radius: 25px;
+            width: 14%;
+            height: 14%;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
         .div-44 {
-          border-radius: 25px;
-          box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
-          background-color: rgba(255, 145, 35, 0.31);
-          align-self: start;
-          display: flex;
-          align-items: flex-start;
-          gap: 20px;
-          justify-content: space-between;
-          padding: 0 8px 7px 28px;
+            border-radius: 25px;
+            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
+            background-color: rgba(255, 145, 35, 0.31);
+            align-self: start;
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            justify-content: space-between;
+            padding: 4px 8px 4px 29px;
+            width: 150px;
         }
         .div-45 {
           display: flex;
@@ -705,57 +710,12 @@ function MyComponent() {
             sans-serif;
           z-index: 10;
         }
-        .div-48 {
-          display: flex;
-          flex-direction: column;
-          overflow: hidden;
-          align-self: start;
-          position: relative;
-          aspect-ratio: 0.74;
-          width: 37px;
-          align-items: center;
-          font-size: 12px;
-          justify-content: center;
-        }
         .img-20 {
-          position: absolute;
-          inset: 0;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-        .div-49 {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          overflow: hidden;
-          aspect-ratio: 0.74;
-          width: 100%;
-          padding: 1px 0;
-        }
-        .img-21 {
-          position: absolute;
-          inset: 0;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-        .img-22 {
-          aspect-ratio: 1;
-          object-fit: auto;
-          object-position: center;
-          width: 100%;
-          align-self: center;
-          z-index: 10;
-        }
-        .div-50 {
-          position: relative;
-          color: #ffd969;
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
-          z-index: 10;
+            aspect-ratio: 0.74;
+            object-fit: auto;
+            object-position: center;
+            width: 37px;
+            align-self: start;
         }
         .div-52 {
           display: flex;
@@ -766,69 +726,74 @@ function MyComponent() {
           padding: 0 20px;
         }
         .div-53 {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          overflow: hidden;
-          aspect-ratio: 1;
-          width: 48px;
-          align-items: start;
-          color: #ff9123;
-          justify-content: center;
-          margin: auto 0;
-          padding: 15px;
-          font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            width: 48px;
+            align-items: center;
+            color: #ffce2b;
+            justify-content: center;
+            padding: 15px 17px;
+            font: 20px Press Start 2P, -apple-system, Roboto, Helvetica,
             sans-serif;
+            font-weight: bold;
+            font-size: 1.5em;
         }
         .img-23 {
-          position: absolute;
-          inset: 0;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          object-position: center;
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
         }
         .div-54 {
-          position: relative;
+            position: relative;
         }
         .img-24 {
-          aspect-ratio: 0.92;
-          object-fit: auto;
-          object-position: center;
-          width: 55px;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            aspect-ratio: 0.92;
+            object-fit: auto;
+            object-position: center;
+            border-radius: 25px;
+            width: 17%;
+            height: 17%;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
         .div-55 {
-          border-radius: 25px;
-          box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
-          background-color: rgba(255, 145, 35, 0.31);
-          align-self: start;
-          display: flex;
-          gap: 20px;
-          font-size: 15px;
-          justify-content: space-between;
-          padding: 4px 10px 4px 28px;
+            border-radius: 25px;
+            box-shadow: 0px 6px 4px 0px rgba(0, 0, 0, 0.33);
+            background-color: rgba(255, 145, 35, 0.31);
+            align-self: start;
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 1em;
+            justify-content: space-between;
+            padding: 4px 8px 4px 29px;
+            width: 150px;
         }
         .div-56 {
-          display: flex;
-          flex-direction: column;
-          margin: auto 0;
+            display: flex;
+            flex-direction: column;
+            margin: auto 0;
         }
         .div-57 {
-          color: #ffd969;
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
-          z-index: 10;
+            color: #ffd969;
+            font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
+                sans-serif;
+            z-index: 10;
         }
         .img-25 {
-          aspect-ratio: 0.74;
-          object-fit: auto;
-          object-position: center;
-          width: 37px;
+            aspect-ratio: 0.74;
+            object-fit: auto;
+            object-position: center;
+            width: 37px;
         }
-      `}</style>
+        `}</style>
     </>
-  );
+    );
 }
 
 
