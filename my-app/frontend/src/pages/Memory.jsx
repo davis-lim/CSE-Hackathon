@@ -45,14 +45,17 @@ function MyComponent() {
       <style jsx>{`
         .div {
           background-color: #fff5bb;
-          display: flex;
-          max-width: 480px;
-          width: 100%;
-          flex-direction: column;
-          font-size: 20px;
-          font-weight: 400;
-          margin: 0 auto;
-          padding: 29px 18px 0;
+            display: flex;
+            max-height: 800px;
+            max-width: 430px;
+            flex-direction: column;
+            font-size: 20px;
+            color: #472700;
+            font-weight: 400;
+            white-space: nowrap;
+            margin: 0 auto;
+            padding: 80px 35px;
+            font-family: 'Press Start 2P', cursive;
         }
         .div-2 {
           display: flex;
@@ -90,8 +93,7 @@ function MyComponent() {
           align-self: center;
           z-index: 10;
           margin-top: 18px;
-          font: 14px Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
+          margin-bottom: 20px;
         }
         .div-7 {
           color: #ff9123;
@@ -116,6 +118,7 @@ function MyComponent() {
           flex-direction: column;
           color: #472700;
           padding: 17px;
+          margin-left: -15px;
         }
         .div-10 {
           color: #fff5bb;

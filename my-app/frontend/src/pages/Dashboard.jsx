@@ -14,6 +14,29 @@ function MyComponent() {
     const navigateToRun = () => {
         navigate('/camera');
     }
+    let currentWidth = 175;
+
+    const increaseWidth = () => {
+        currentWidth = currentWidth + 10;
+    };
+
+    const checkComplete = () => {
+        // localStorage.clear();
+        // increaseWidth()
+        return localStorage.getItem('journal');
+    }
+
+    const checkCompleteGoals = () => {
+        increaseWidth()
+        return localStorage.getItem('goals');
+    }
+
+    const checkCompleteSunset = () => {
+        increaseWidth()
+        return localStorage.getItem('sunset');
+    }
+
+
     return (
     <>
       <div className="div">
@@ -27,6 +50,9 @@ function MyComponent() {
             srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/743be299490fdfe6da31a40e70b598e4ffbf6467fd27275ee969b22cab6ba175?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/743be299490fdfe6da31a40e70b598e4ffbf6467fd27275ee969b22cab6ba175?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/743be299490fdfe6da31a40e70b598e4ffbf6467fd27275ee969b22cab6ba175?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/743be299490fdfe6da31a40e70b598e4ffbf6467fd27275ee969b22cab6ba175?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/743be299490fdfe6da31a40e70b598e4ffbf6467fd27275ee969b22cab6ba175?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/743be299490fdfe6da31a40e70b598e4ffbf6467fd27275ee969b22cab6ba175?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/743be299490fdfe6da31a40e70b598e4ffbf6467fd27275ee969b22cab6ba175?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/743be299490fdfe6da31a40e70b598e4ffbf6467fd27275ee969b22cab6ba175?apiKey=5880849d19014bf7921644dd08a954e6&"
             className="img"
         />
+
+        { checkComplete() || checkCompleteGoals() || checkCompleteSunset() ? <div className="line" style={{display: 'block', width: '${currentWidth + 1}px'}}></div> : <div className="line" style={{display: 'none'}}></div> }
+
         <img
             loading="lazy"
             srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/e753a817da62a0d300efb6846e775858093839f0b7cc8881c2e62bf694a8fed3?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e753a817da62a0d300efb6846e775858093839f0b7cc8881c2e62bf694a8fed3?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e753a817da62a0d300efb6846e775858093839f0b7cc8881c2e62bf694a8fed3?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e753a817da62a0d300efb6846e775858093839f0b7cc8881c2e62bf694a8fed3?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e753a817da62a0d300efb6846e775858093839f0b7cc8881c2e62bf694a8fed3?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e753a817da62a0d300efb6846e775858093839f0b7cc8881c2e62bf694a8fed3?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e753a817da62a0d300efb6846e775858093839f0b7cc8881c2e62bf694a8fed3?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e753a817da62a0d300efb6846e775858093839f0b7cc8881c2e62bf694a8fed3?apiKey=5880849d19014bf7921644dd08a954e6&"
@@ -42,9 +68,11 @@ function MyComponent() {
         <div className="div-6">
             <div className="div-7">Daily Tasks </div>
         </div>
-        <div className="div-9" onClick={navigateToRun}>Go for a run</div> 
-        <div className="div-10">Write down goals for today</div> 
-        <div className="div-11">Catch the sunset</div>
+        { checkComplete() ? <div className="div-9" style={{backgroundColor: 'lightgreen'}} >Go for a run</div> : <div className="div-9" onClick={navigateToRun}  >Go for a run</div> }
+        { checkCompleteGoals() ? <div className="div-10" style={{backgroundColor: 'lightgreen'}} >Write down goals for today</div> : <div className="div-10" onClick={() => navigate('/goals')}  >Write down goals for today</div> }
+        { checkCompleteSunset() ? <div className="div-11" style={{backgroundColor: 'lightgreen'}} >Catch the sunset</div> : <div className="div-11" onClick={() => navigate('/sunset')}  >Catch the sunset</div> }
+        {/* <div className="div-10" onClick={() => navigate('/goals')} >Write down goals for today</div>  */}
+        {/* <div className="div-11" onClick={() => navigate('/sunset')}>Catch the sunset</div> */}
         <div className="div-12">
             <div className="navbarpics">
                 <img
@@ -60,14 +88,14 @@ function MyComponent() {
                 />
                 <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a6db6a22ec5420922fd49704bf84c2573cfcc8d8aa5f299541b097d3b2058995?apiKey=5880849d19014bf7921644dd08a954e6&"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e496741e080e6dee77de2794a4ca07f55a5adce2ebfe44a68ec94a303a905fac?apiKey=5880849d19014bf7921644dd08a954e6&"
                 className="friends"
                 />
             </div>
             <div className="navbarheadings">
                 <span>Memories</span>
                 <span>Home</span>
-                <span className="friens">Friends</span>
+                <span className="friens">Settings</span>
             </div>
         </div>
         </div>
@@ -87,7 +115,14 @@ function MyComponent() {
         }
         .navbarheadings {
             display: flex;
-
+        }
+        .line {
+            background-color: #fff9e6;
+            position: fixed;
+            height: 12px;
+            width: 280px;
+            margin-top: 396px;
+            margin-left: 47px;
         }
         .hive {
             aspect-ratio: 1;

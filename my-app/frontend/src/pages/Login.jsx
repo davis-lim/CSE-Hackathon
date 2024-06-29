@@ -112,6 +112,8 @@ return (
           background-color: #fff9e6;
           margin-top: 12px;
           height: 51px;
+          font-family: 'Press Start 2P', cursive;
+          font-size: 0.7em;
         }
         .div-10 {
           color: #472700;
@@ -126,6 +128,8 @@ return (
           background-color: #fff9e6;
           margin-top: 12px;
           height: 51px;
+          font-family: 'Press Start 2P', cursive;
+          font-size: 0.7em;
             
         }
         .div-12 {

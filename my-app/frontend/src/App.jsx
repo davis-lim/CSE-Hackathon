@@ -10,6 +10,8 @@ import Memories from './pages/Memories';
 import Camera from './pages/Camera';
 import Memory from './pages/Memory';
 import Edit from './pages/Edit';
+import Goals from './pages/Goals';
+import Sunset from './pages/Sunset';
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
           <Route path='/camera' element={<Camera/>}/>
           <Route path='/memory' element={<Memory/>}/>
           <Route path='/edit' element={<Edit/>}/>
+          <Route path='/goals' element={<Goals/>}/>
+          <Route path='/sunset' element={<Sunset/>}/>
         </Routes>
       </BrowserRouter>
   );

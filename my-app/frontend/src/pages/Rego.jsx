@@ -57,6 +57,7 @@ function MyComponent() {
             margin: 0 auto;
             padding: 80px 35px;
         }
+
         .div-2 {
           display: flex;
           gap: 9px;
@@ -115,6 +116,7 @@ function MyComponent() {
           background-color: #fff9e6;
           margin-top: 12px;
           height: 51px;
+          font-family: 'Press Start 2P', cursive;
           font-size: 1em;
         }
         .div-10 {
@@ -130,6 +132,7 @@ function MyComponent() {
           background-color: #fff9e6;
           margin-top: 12px;
           height: 51px;
+          font-family: 'Press Start 2P', cursive;
           font-size: 1em;
         }
         .div-12 {
@@ -145,6 +148,7 @@ function MyComponent() {
           background-color: #fff9e6;
           margin-top: 12px;
           height: 51px;
+          font-family: 'Press Start 2P', cursive;
           font-size: 1em;
         }
         .div-14 {
@@ -160,6 +164,7 @@ function MyComponent() {
           background-color: #fff9e6;
           margin-top: 12px;
           height: 51px;
+          font-family: 'Press Start 2P', cursive;
           font-size: 1em;
         }
         .div-16 {

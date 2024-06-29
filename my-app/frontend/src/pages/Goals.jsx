@@ -14,7 +14,7 @@ function MyComponent() {
             const image = webRef.current.getScreenshot();
             setImageSrc(image); // Save the captured image
             setComplete(true);
-            localStorage.setItem('journal', 'true');
+            localStorage.setItem('goals', 'true');
             const response = await fetch('/api/upload-image', {
                 method: 'POST',
                 headers: {
@@ -49,7 +49,7 @@ function MyComponent() {
                         <div className="div-5">Challenge</div>
                     </div>
                 </div>
-                <div className="div-7">Journal for 10 Minutes</div>
+                <div className="div-7">Write down goals</div>
                 <div className="camera" />
                 {imageSrc ? (
                     <img src={imageSrc} alt="Captured" className="frame"/>
@@ -129,6 +129,7 @@ function MyComponent() {
           color: #ff9123;
           margin-top: 35px;
           margin-bottom: 40px;
+          text-align: center;
         }
         .div-8 {
           border-radius: 25px;
