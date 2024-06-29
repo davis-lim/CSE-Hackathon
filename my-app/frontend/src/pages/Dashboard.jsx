@@ -1,10 +1,15 @@
 import * as React from "react";
 import { useNavigate, Navigate } from 'react-router-dom';
+import '../App'
+
 
 function MyComponent() {
     const navigate = useNavigate();
     const navigateToRego = () => {
         navigate('/hive');
+    }
+    const navigateToMem = () => {
+        navigate('/memories');
     }
     return (
     <>
@@ -42,6 +47,7 @@ function MyComponent() {
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/66cdcae9ee8ea68fa549a3a7460b8b98387941dc866f647e5172ea79ca76b07d?apiKey=5880849d19014bf7921644dd08a954e6&"
                 className="memz"
+                onClick={navigateToMem}
                 />
                 <img
                     loading="lazy"
@@ -63,10 +69,10 @@ function MyComponent() {
         </div>
       <style jsx>{`
         .div {
-          background-color: #fff5bb;
+            background-color: #fff5bb;
             display: flex;
-            height: 800px;
-            width: 430px;
+            max-height: 800px;
+            max-width: 430px;
             flex-direction: column;
             font-size: 20px;
             color: #472700;
@@ -85,7 +91,7 @@ function MyComponent() {
             object-fit: auto;
             object-position: center;
             width: 60px;
-            margin-top: 59px;
+            margin-top: 40px;
             margin-left: 8px;
         }
         .edit {
@@ -94,7 +100,7 @@ function MyComponent() {
             object-fit: auto;
             object-position: center;
             width: 60px;
-            margin-top: 58px;
+            margin-top: 40px;
             margin-left: 360px;
         }
         .div-2 {
@@ -108,7 +114,7 @@ function MyComponent() {
             white-space: nowrap;
             margin-top: -80px;
             margin-left: -35px;
-            padding: 40px 60px 18px;
+            padding: 30px 60px 18px;
         }
         .div-12 {
             background-color: #ffa800;
@@ -121,7 +127,7 @@ function MyComponent() {
             white-space: nowrap;
             margin-top: 800px;
             margin-left: -35px;
-            padding: 20px 60px 60px;
+            padding: 20px 60px 15px;
         }
         .navbarpics{
             display: flex;
@@ -134,7 +140,9 @@ function MyComponent() {
             flex-direction: row;
             justify-content: space-between;
             margin-left: -10px;
-            font-size: 0.7em;
+            margin-top: 10px;
+            font-size: 0.4em;
+            font-family: 'Press Start 2P', cursive;
         }
         .friens{
             margin-right: -15px;
@@ -154,17 +162,12 @@ function MyComponent() {
           display: flex;
           flex-direction: column;
         }
+
         .div-4 {
-          color: #84460B;
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
-          z-index: 10;
-          font-size: 1.5em;
-        }
-        .div-5 {
-          color: #472700;
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
+            color: #84460B;
+            font-family: 'Press Start 2P', cursive;
+            z-index: 10;
+            font-size: 1.5em;
         }
         .img {
           aspect-ratio: 1.16;
@@ -190,8 +193,7 @@ function MyComponent() {
         }
         .div-7 {
           color: #84460B;
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
+          font-family: 'Press Start 2P', cursive;
           z-index: 10;
           align-self: center;
           font-weight: bold;
@@ -206,10 +208,11 @@ function MyComponent() {
           height: 66px;
           margin-top: 30px;
           font-weight: bold;
-          font-size: 1.2em;
+          font-size: 0.8em;
           align-items: center;
           display: flex;
           justify-content: center;
+          font-family: 'Press Start 2P', cursive;
         }
         .div-10 {
           border-radius: 25px;
@@ -220,10 +223,11 @@ function MyComponent() {
           max-width: 100%;
           height: 66px;
           font-weight: bold;
-          font-size: 1.2em;
+          font-size: 0.7em;
           align-items: center;
           display: flex;
           justify-content: center;
+          font-family: 'Press Start 2P', cursive;
         }
         .div-11 {
           border-radius: 25px;
@@ -234,11 +238,12 @@ function MyComponent() {
           max-width: 100%;
           height: 66px;
           font-weight: bold;
-          font-size: 1.2em;
+          font-size: 0.8em;
           align-items: center;
           display: flex;
           justify-content: center;
           margin-bottom: 30px;
+          font-family: 'Press Start 2P', cursive;
         }
       `}</style>
     </>

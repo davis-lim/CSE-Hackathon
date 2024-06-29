@@ -49,7 +49,8 @@ function MyComponent() {
             height: 800px;
             width: 430px;
             flex-direction: column;
-            font-size: 20px;
+            font-size: 0.8em;
+            font-family: 'Press Start 2P', cursive;
             color: #472700;
             font-weight: 400;
             white-space: nowrap;
@@ -174,8 +175,7 @@ function MyComponent() {
           white-space: nowrap;
           justify-content: center;
           padding: 26px 32px;
-          font: 400 20px Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
+          font-family: 'Press Start 2P', cursive;
           font-size: 1em;
         }
         .div-16:hover {

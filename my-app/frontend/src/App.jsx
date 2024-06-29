@@ -6,6 +6,7 @@ import Landing from './pages/LandingPage';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Hive from './pages/Hive';
+import Memories from './pages/Memories';
 import Camera from './pages/Camera';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/hive' element={<Hive/>}/>
+          <Route path='/memories' element={<Memories/>}/>
           <Route path='/camera' element={<Camera/>}/>
         </Routes>
       </BrowserRouter>
