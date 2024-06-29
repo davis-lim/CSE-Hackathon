@@ -199,7 +199,31 @@ app.delete('/user/tasks/:id', async (request, response) => {
     }
 })
 
+// Route to handle uploading an image and creating a new memory
+app.post('/api/upload-image', async (req, res) => {
+    try {
+        const { imageUrl, task } = req.body; // Assuming imageUrl comes from frontend
 
+        // Validate input (if necessary)
+        if (!imageUrl || !task) {
+            return res.status(400).json({ message: 'Missing required fields: imageUrl, task' });
+        }
+
+        // Create a new Memory document
+        const newMemory = new Memory({
+            image: imageUrl,
+            task: mongoose.Types.ObjectId(task), // Assuming task is an ObjectId
+        });
+
+        // Save the memory to the database
+        const savedMemory = await newMemory.save();
+
+        res.status(201).json(savedMemory);
+    } catch (error) {
+        console.error('Error saving memory:', error);
+        res.status(500).json({ error: 'Failed to save memory' });
+    }
+});
 
 mongoose
     .connect(mongoDBURL)

@@ -7,9 +7,10 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Hive from './pages/Hive';
 import Memories from './pages/Memories';
+import Camera from './pages/Camera';
 
 function App() {
-  
+
 
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/hive' element={<Hive/>}/>
           <Route path='/memories' element={<Memories/>}/>
+          <Route path='/camera' element={<Camera/>}/>
         </Routes>
       </BrowserRouter>
   );
