@@ -229,8 +229,7 @@ function MyComponent() {
         }
         .div-3 {
           color: #84460B;
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
+          font-family: 'Press Start 2P', cursive;
           z-index: 10;
           font-weight: bold;
           font-size: 1.2em;

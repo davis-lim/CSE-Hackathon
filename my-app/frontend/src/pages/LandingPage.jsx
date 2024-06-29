@@ -49,13 +49,11 @@ function MyComponent() {
         .div-2 {
           align-self: center;
           margin-top: 24px;
-          font: 40px Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
+          font-family: 'Press Start 2P', cursive;
             font-size: 2.5em;
         }
         .div-3 {
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
+          font-family: 'Press Start 2P', cursive;
           font-size: 1em;
           border-radius: 30.5px;
           border: 1px solid #472700;
@@ -72,8 +70,7 @@ function MyComponent() {
             color: white;
         }
         .div-4 {
-          font-family: Press Start 2P, -apple-system, Roboto, Helvetica,
-            sans-serif;
+          font-family: 'Press Start 2P', cursive;
             font-size: 1em;
           border-radius: 30.5px;
           border: 1px solid #472700;
