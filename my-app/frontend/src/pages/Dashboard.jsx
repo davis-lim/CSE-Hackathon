@@ -11,6 +11,9 @@ function MyComponent() {
     const navigateToMem = () => {
         navigate('/memories');
     }
+    const navigateToRun = () => {
+        navigate('/camera');
+    }
     return (
     <>
       <div className="div">
@@ -34,13 +37,14 @@ function MyComponent() {
         loading="lazy"
         srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/c95a91f10e4d5c63421433818f5a0a10c5dc6250efe40a992ad1d8a5b561f83e?apiKey=5880849d19014bf7921644dd08a954e6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/c95a91f10e4d5c63421433818f5a0a10c5dc6250efe40a992ad1d8a5b561f83e?apiKey=5880849d19014bf7921644dd08a954e6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c95a91f10e4d5c63421433818f5a0a10c5dc6250efe40a992ad1d8a5b561f83e?apiKey=5880849d19014bf7921644dd08a954e6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/c95a91f10e4d5c63421433818f5a0a10c5dc6250efe40a992ad1d8a5b561f83e?apiKey=5880849d19014bf7921644dd08a954e6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/c95a91f10e4d5c63421433818f5a0a10c5dc6250efe40a992ad1d8a5b561f83e?apiKey=5880849d19014bf7921644dd08a954e6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c95a91f10e4d5c63421433818f5a0a10c5dc6250efe40a992ad1d8a5b561f83e?apiKey=5880849d19014bf7921644dd08a954e6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/c95a91f10e4d5c63421433818f5a0a10c5dc6250efe40a992ad1d8a5b561f83e?apiKey=5880849d19014bf7921644dd08a954e6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/c95a91f10e4d5c63421433818f5a0a10c5dc6250efe40a992ad1d8a5b561f83e?apiKey=5880849d19014bf7921644dd08a954e6&"
         className="edit"
+        onClick={() => navigate('/edit')}
         />
         <div className="div-6">
             <div className="div-7">Daily Tasks </div>
         </div>
-        <div className="div-9">Go for a run</div> 
+        <div className="div-9" onClick={navigateToRun}>Go for a run</div> 
         <div className="div-10">Write down goals for today</div> 
-        <div className="div-11">Meditate for 20mins</div>
+        <div className="div-11">Catch the sunset</div>
         <div className="div-12">
             <div className="navbarpics">
                 <img
