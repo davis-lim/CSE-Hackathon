@@ -21,7 +21,8 @@ function MyComponent() {
           </div>
         </div>
         <div className="div-6">Meditate for 5 Minutes</div>
-        <div className="div-8" />
+        {/* <div className="div-8" /> */}
+        <img src={`${process.env.PUBLIC_URL}/IMG_0824.jpeg`} alt="Description" />
         <div className="div-9">
           <div className="div-10">Comments</div>
           <div className="div-12">
@@ -46,7 +47,7 @@ function MyComponent() {
         .div {
           background-color: #fff5bb;
             display: flex;
-            max-height: 800px;
+            height: 820px;
             max-width: 430px;
             flex-direction: column;
             font-size: 20px;
