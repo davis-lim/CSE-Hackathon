@@ -40,7 +40,7 @@ function MyComponent() {
           <div className="div-8">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/e496741e080e6dee77de2794a4ca07f55a5adce2ebfe44a68ec94a303a905fac?apiKey=5880849d19014bf7921644dd08a954e6&"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3bc1b39cce317d4c84e3092ee0ca4cd3a9ad04dbd17a0eeaa2b86f9c11f78cb3?apiKey=5880849d19014bf7921644dd08a954e6&"
               className="img-4"
             />
             <div className="div-9">Settings</div>
